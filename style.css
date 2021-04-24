@@ -1,4 +1,4 @@
-.table {
+/* .table {
     display: flex;
     text-align: center;
     position: relative;
@@ -9,7 +9,7 @@
 th {
     padding: 5px 10px;
     border: 1px solid rgb(100, 100, 100);
-}
+} */
 
 .table input {
     width: 50px;
@@ -18,3 +18,31 @@ th {
 .check{
     display: inline-block;
 }
+
+.table {
+    display: table;
+    font-family: cursive;
+    width: min-content;
+    margin: 1px 1px;
+    }
+  th, td:first-child {
+  background: #84aacc;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 10px;
+  }
+  th, td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: rgb(0, 0, 0);
+  }
+  td {
+  background: #D8E6F3;
+  border-radius: 6px;
+  }
+  th:first-child, td:first-child {
+  text-align: left;
+  border-radius: 8px;
+  }
+  td :hover { background-color: #ffffff; }
+  
