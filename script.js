@@ -1,3 +1,15 @@
+var result = "<table border=1>";
+    for(var i=0; i<10; i++) {
+        result += "<tr>";
+        for(var j=0; j<10; j++){
+            result += "<td>"+'-------'+"</td>";
+        }
+        result += "</tr>";
+    }
+    result += "</table>";
+
+document.getElementById('cont').innerHTML = result;
+
 function firstTable(){
     let arr1 = [];
     let maxArr1;
@@ -107,6 +119,7 @@ function properties(arr){
     }
     
     if (refl){
+        strongAntiRefl = false;
         outerLoop: for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr.length; j++) {
                 if ( i != j ){
@@ -119,6 +132,7 @@ function properties(arr){
         }
     }
     else{
+        strongRefl = false;
         outerLoop: for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr.length; j++) {
                 if ( i != j ){
@@ -164,8 +178,62 @@ function properties(arr){
         
     }
 
+    //транзитивность
 
-console.log(simm, antiSimm)
+    tranz = true;
+    minArr = []
+
+    /*for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            for (let k = 0; k < arr.length; k++) {
+                minArr.push(Math.min(arr[i][k], arr[k][j]));
+                
+            }
+            mm = Math.max(...minArr);
+
+            if (arr[i][j] < mm) {
+                tranz = false;
+            }
+        }
+    }
+    */
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) { 
+            for (let k = 0; k < arr.length; k++) {
+                if (!(arr[i][k] >= arr[i][j] && arr[i][k] >= arr[j][k])){
+                    tranz = false;
+                }
+            } 
+        }
+    }
+    
+
+    // линейность
+
+    strongLinear = true;
+    weakLinear = true;
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if ( !( arr[i][j] == 1 || arr[j][i] == 1 ) ){
+                strongLinear = false;
+            }
+            if ( !( arr[i][j] > 0 || arr[j][i] > 0 ) ){
+                weakLinear = false;
+            }
+        }        
+    }
+
+
+    // вывод в fieldset
+
+    document.getElementById('prop1').innerHTML = refl ? (strongRefl ? 'Сильно' : 'Слабо') : 'Нет';
+    document.getElementById('prop2').innerHTML = !refl ? (strongAntiRefl ? 'Сильно' : 'Слабо') : 'Нет';
+    document.getElementById('prop3').innerHTML = simm ? 'Да' : 'Нет';
+    document.getElementById('prop4').innerHTML = antiSimm ? 'Да' : 'Нет';
+    document.getElementById('prop5').innerHTML = aSimm ? 'Да' : 'Нет';
+    document.getElementById('prop6').innerHTML = strongLinear ? 'Сильная' : (weakLinear ? 'Слабая' : 'Нет');
+    document.getElementById('prop7').innerHTML = tranz ? 'Да' : 'Нет';
     
 }
 
