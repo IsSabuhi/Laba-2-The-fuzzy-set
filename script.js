@@ -163,7 +163,6 @@ function properties(arr){
         }
     }
 
-
     // симметричность
 
     simm = true;
@@ -227,7 +226,6 @@ function properties(arr){
             }
         }        
     }
-
 
     // вывод
 

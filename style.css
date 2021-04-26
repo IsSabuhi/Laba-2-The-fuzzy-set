@@ -89,15 +89,17 @@ header {
 }
 
 th, td:first-child {
-  background: #84aacc;
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  background: #D8E6F3;
+  color: rgb(0, 0, 0);
+  
   border-radius: 10px;
+  
   }
 th, td {
     border-style: solid;
     border-width: 0 1px 1px 0;
     border-color: rgb(0, 0, 0);
+    padding: 4px 4px;
     }
 td {
       background: #D8E6F3;
@@ -105,7 +107,7 @@ td {
       }
 th:first-child, td:first-child {
       text-align: left;
-      border-radius: 15px;
+      border-radius: 5px;
       }
 td :hover { background-color: #ffffff; }
       
@@ -127,4 +129,16 @@ td :hover { background-color: #ffffff; }
     padding-left: 20px;
     text-align: left;
     width: 270px;
+}
+.designations {
+  padding-left: 20px;
+    text-align: left;
+    width: 450px;
+    line-height: 0.55;
+    padding-top: 5px;
+}
+.text {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
 }
