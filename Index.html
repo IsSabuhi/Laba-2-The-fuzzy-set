@@ -10,6 +10,23 @@
 </head>
 
 <body>
+
+    <header>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn dropbtn1">Отношения</button>
+            <div id="myDropdown" class="dropdown-content"> 
+               <!-- Кнопки -->
+              <div class="Changebutton">
+                <button onclick="firstTable()" class="dropbtn dropbtn1">Больше</button>
+              </div>
+              <div class="Changebutton">
+                <button onclick="secondTable()" class="dropbtn dropbtn2">Одинаковы</button>
+              </div>
+      
+            </div>
+          </div>
+    </header>
+
     <h1 align="center">Лабораторная работа №2 по нечеткой логике</h1>
     <div class="main">
         <div class="table">
@@ -75,14 +92,7 @@
                 </tr>
             </table>
         </div>
-
-
-
-        <div class="buttons">
-            <button onclick="firstTable()">Больше</button>
-            <button onclick="secondTable()">Одинаковы</button>
-        </div>
-
+        
         <div class="bottom-part">
             <div class="table" id='cont'></div>
             <div class="properties">

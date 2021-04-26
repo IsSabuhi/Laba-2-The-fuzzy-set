@@ -1,4 +1,22 @@
-var result = "<table border=1>";
+// Скрипт для Раскрыв. кнопки
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+var result = "<table border=0>";
     for(var i=0; i<10; i++) {
         result += "<tr>";
         for(var j=0; j<10; j++){
@@ -90,7 +108,7 @@ function FunT(a, min, max){
     else if (a >= max) return 0 
 }
 function makeTableHTML(myArray) {
-    var result = "<table border=1>";
+    var result = "<table border=0>";
     for(var i=0; i<myArray.length; i++) {
         result += "<tr>";
         for(var j=0; j<myArray[i].length; j++){
