@@ -1,3 +1,4 @@
+
 // Скрипт для Раскрыв. кнопки
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
