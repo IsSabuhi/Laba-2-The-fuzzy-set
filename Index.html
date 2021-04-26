@@ -12,22 +12,9 @@
 <body>
 
     <header>
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn dropbtn1">Отношения</button>
-            <div id="myDropdown" class="dropdown-content"> 
-               <!-- Кнопки -->
-              <div class="Changebutton">
-                <button onclick="firstTable()" class="dropbtn dropbtn1">Больше</button>
-              </div>
-              <div class="Changebutton">
-                <button onclick="secondTable()" class="dropbtn dropbtn2">Одинаковы</button>
-              </div>
-      
-            </div>
-          </div>
+        <h1 align="center">Лабораторная работа №2 по нечеткой логике</h1>
     </header>
 
-    <h1 align="center">Лабораторная работа №2 по нечеткой логике</h1>
     <h2 align="center">Вариант 4</h2>
     <span class="text">
         На множестве составов ячеистобетонных смесей задать нечеткие отношения:
@@ -112,7 +99,18 @@
                     <td><input type="number" id="b10" value="7"></td>
                 </tr>
             </table>
+
+        <div class="Butt">
+            <fieldset>
+
+                <button onclick="firstTable()" class="dropbtn dropbtn1">На замес ячеистобентонной смеси y требуется намного больше извести-кипелки активностью 70%, чем на замес смеси x</button> 
+                    <br>
+                <button onclick="secondTable()" class="dropbtn dropbtn2">На замес ячеистобетонных смесей x и y требуется примерно равное количество гипса</button>
+
+            </fieldset>
         </div>
+
+    </div>
         
         <div class="bottom-part">
             <div class="table" id='cont'></div>
