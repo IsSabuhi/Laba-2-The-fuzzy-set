@@ -5,6 +5,7 @@ header {
   }
  /* Кнопка раскрывающегося списка */
  .dropbtn {
+  font-size: 12px;
   text-align: revert;
   margin: 0px 5px;
   padding: 0px 0px;
@@ -90,9 +91,8 @@ header {
 }
 
 th, td:first-child {
-  background: #D8E6F3;
+  /* background: #D8E6F3;  */
   color: rgb(0, 0, 0);
-  
   border-radius: 10px;
   
   }
@@ -103,7 +103,7 @@ th, td {
     padding: 4px 4px;
     }
 td {
-      background: #D8E6F3;
+      /* background: rgb(216, 230, 243); */
       border-radius: 5px;
       }
 th:first-child, td:first-child {

@@ -108,12 +108,19 @@ function FunT(a, min, max){
     else if (a >= 0 && a <= max) return (max - a) / max
     else if (a >= max) return 0 
 }
+
 function makeTableHTML(myArray) {
     var result = "<table border=0>";
-    for(var i=0; i<myArray.length; i++) {
+    for (var i = 0; i < myArray.length; i++) {
         result += "<tr>";
-        for(var j=0; j<myArray[i].length; j++){
-            result += "<td>"+myArray[i][j]+"</td>";
+        for (var j = 0; j < myArray[i].length; j++) {
+            if (i == j){
+                result += "<td bgcolor='red'>" + myArray[i][j] + "</td>";
+            }
+            else{
+                result += "<td style='background: #D8E6F3''>" + myArray[i][j] + "</td>";
+            }
+
         }
         result += "</tr>";
     }
