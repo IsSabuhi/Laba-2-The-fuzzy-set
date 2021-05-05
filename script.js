@@ -1,4 +1,4 @@
-var result = "<table border=1>";
+var result = "<table border=0>";
 for (var i = 0; i < 10; i++) {
     result += "<tr>";
     for (var j = 0; j < 10; j++) {
@@ -109,12 +109,12 @@ function FunT(x, max) {
 }
 
 function makeTableHTML(myArray) {
-    var result = "<table border=1>";
+    var result = "<table border=0>";
     for (var i = 0; i < myArray.length; i++) {
         result += "<tr>";
         for (var j = 0; j < myArray[i].length; j++) {
             if (i == j) {
-                result += "<td bgcolor='lightblue'>" + myArray[i][j] + "</td>";
+                result += "<td bgcolor='red'>" + myArray[i][j] + "</td>";
             } else {
                 result += "<td>" + myArray[i][j] + "</td>";
             }
