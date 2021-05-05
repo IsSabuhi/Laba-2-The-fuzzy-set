@@ -18,9 +18,9 @@ function firstTable() {
         arr1.push(Number(document.getElementById(`a${i}`).value));
     }
 
-    arr1 = subtractionArrayFunS(arr1);
+    arr1 = sArrayFunS(arr1);
 
-    maxArr1 = maxElemOf2dArray(arr1)
+    maxArr1 = maxElemOfArray(arr1)
 
     funsArr1 = arr1.map((arr) => arr.map((a) => (FunS(a, maxArr1).toFixed(3))));
 
@@ -39,9 +39,9 @@ function secondTable() {
         arr2.push(Number(document.getElementById(`b${i}`).value));
     }
 
-    arr2 = subtractionArrayFunT(arr2);
+    arr2 = sArrayFunT(arr2);
 
-    maxArr2 = maxElemOf2dArray(arr2);
+    maxArr2 = maxElemOfArray(arr2);
 
     console.log(minArr2)
     funtArr2 = arr2.map((arr) => arr.map((a) => (FunT(a, maxArr2).toFixed(3))));
@@ -52,7 +52,7 @@ function secondTable() {
 
 }
 
-function subtractionArrayFunS(arr) {
+function sArrayFunS(arr) {
     tmpArr = [
         []
     ];
@@ -68,7 +68,7 @@ function subtractionArrayFunS(arr) {
     return tmpArr
 }
 
-function subtractionArrayFunT(arr) {
+function sArrayFunT(arr) {
     tmpArr = [
         []
     ];
@@ -84,7 +84,7 @@ function subtractionArrayFunT(arr) {
     return tmpArr
 }
 
-function maxElemOf2dArray(arr) {
+function maxElemOfArray(arr) {
     max = arr[0][0]
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr.length; j++) {
@@ -241,8 +241,6 @@ function properties(arr) {
         }
     }
 
-
-    // вывод в fieldset
 
     document.getElementById('prop1').innerHTML = refl ? (strongRefl ? 'Сильно' : 'Слабо') : 'Нет';
     document.getElementById('prop2').innerHTML = !refl ? (strongAntiRefl ? 'Сильно' : 'Слабо') : 'Нет';
